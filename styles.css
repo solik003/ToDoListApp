@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: plum;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+  }
+  
+  h1 {
+    margin-bottom: 24px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .card {
+    border: 2px solid #cdcdcd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+  }
+  ul.collection {
+    list-style: none;
+    padding: 0;
+  }
+  .collection-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .btn-delete {
+    background-color:lightcoral;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .btn-edit {
+    background-color:pink;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .input-field {
+    margin-bottom: 10px;
+  }
+  .btn {
+    background-color:darksalmon;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .clear-tasks{
+    background-color:darksalmon;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+  }
+  
