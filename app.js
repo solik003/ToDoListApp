@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", showTasks);
 // запускаємо функцію addTask коли відправляємо форму (клікаємо на кнопку "Додати завдання")
 form.addEventListener("submit", addTask);
 // запускаємо функцію deleteTask коли клік попадає на список <ul>
-//taskList.addEventListener("click", deleteTask);
+taskList.addEventListener("click", deleteTask);
 //taskList.addEventListener("click",editTask);
 // запускаємо функцію після кліку на кнопку "Видалити всі елементи"
 clearBtn.addEventListener("click", deleteAllTasks);
@@ -26,23 +26,32 @@ function showTasks() {
     // якщо вони там є - витягуємо їх і присвоюємо змінній
     const tasks = JSON.parse(localStorage.getItem("tasks"));
 
-    // для кожної задачі яка є
+    
     tasks.forEach((task) => {
-      // створюємо елемент списку
+     
       const li = document.createElement("li");
       // всередині цього елементу списку додаємо опис завдання
       li.innerHTML = task;
 
-      // сторюємо кнопку для видалення
+      
       const button = document.createElement("button");
-      // всередину кнопку додаємо значення х
+      
       button.innerHTML = "x";
-      // додаємо їй клас
+      
       button.classList.add("btn-delete");
-      // записуємо кнопку після всього, що є всередині елементу списку
+      
       li.append(button);
 
-      // записуємо цей елемент в кінець списку
+      
+      const editButton = document.createElement("button");
+    
+      editButton.innerHTML = "<i class='fas fa-edit'></i>";
+    
+      editButton.classList.add("btn-edit");
+    
+      li.append(editButton);
+
+      
       taskList.append(li);
     });
   }
